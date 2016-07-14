@@ -1,0 +1,59 @@
+body{
+    background-color:black;
+    color:green;
+    font-family:Courier;
+    font-size:60px;
+}
+
+div#combatField{
+    height:600px;
+    width:800px;
+    border:dotted;
+    border-color:green;
+}
+
+div#playerWrapper{
+    height:600px;
+    width:100px;
+    float:left;
+    text-align:right;
+}
+
+
+div#weaponWrapper{
+    height:600px;
+    width:100px;
+    float:left;
+    text-align:center;
+}
+
+div#monsterWrapper{
+    height:600px;
+    width:100px;
+    float:left;
+}
+
+div#infoWrapper{
+    height:500px;
+    width:300px;
+    padding:10px;
+    margin-left:180px;
+    float:left;
+}
+
+div#statWrapper{
+    height:300px;
+    padding:10px;
+    border:dotted;
+    border-color:green;
+    font-size:20px;
+}
+
+div#playerTerminal{
+    height:20px;
+    margin-top:10px;
+    vertical-align:bottom;
+    border:dotted;
+    border-color:green;
+    font-size:16px;
+}
