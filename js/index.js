@@ -16,7 +16,8 @@ var roach = {
     symbol: "R",
     hp:25,
     atk:5,
-    def:3
+    def:3,
+    art: ""
 };
 
 var siren = {
@@ -24,7 +25,8 @@ var siren = {
     symbol: "S",
     hp:50,
     atk:7,
-    def:3
+    def:3,
+    art: ""
 };
 
 var kelpie = {
@@ -32,7 +34,8 @@ var kelpie = {
     symbol: "K",
     hp:100,
     atk:8,
-    def:8
+    def:8,
+    art:""
 };
 
 var dragon = {
@@ -40,7 +43,8 @@ var dragon = {
     symbol: "D",
     hp:100,
     atk:10,
-    def:10
+    def:10,
+    art: "<pre> <>=======()<br>"+" (/\___   /|\\          ()==========<>_<br>"+"       \_/ | \\        //|\   ______/ \)<br>"+"         \_|  \\      // | \_/<br>"+"           \|\/|\_   //  /\/<br>"+"            (oo)\ \_//  /<br>"+"           //_/\_\/ /  |<br>"+"          @@/  |=\  \  |<br>"+"               \_=\_ \ |<br>"+"                 \==\ \|\_<br>"+"              __(\===\(  )\<br>"+"             (((~) __(_/   |<br>"+"                  (((~) \  /<br>"+"                  ______/ /<br>"+"                  '------'</pre>"
 };
 
 var monsterList = [roach,siren,kelpie,dragon];
@@ -114,7 +118,7 @@ function checkKey(e) {
 	}
     }
     else if (e.keyCode == '65') {
-		console.log("arrow");
+	console.log("arrow");
 		document.getElementById("weapon").innerHTML = "->";
 		setTimeout(function(){
 		    document.getElementById("weapon").innerHTML = "";
@@ -148,7 +152,9 @@ function monsterEnters(){
 function monsterStat(mon){
     document.getElementById("monsterStat").innerHTML =
 	"Monster Name: " + mon.name + "<br>" +
-	"Monster HP: " + monsterHealth;
+	"Monster HP: " + monsterHealth + "<br>" +
+	"<div id='ascii'>" + mon.art + "</div>";
+    
 };
 
 function mAttack(weaponChoice,mon){
@@ -157,7 +163,11 @@ function mAttack(weaponChoice,mon){
 	if ( playerDodge == 0 && monsterAtk > 0 ) {
 		player.hp -= monsterAtk;
 		terminalLog(mon.name + " hit you for " + monsterAtk +" damage.")
-		playerStat();
+	    playerStat();
+	    if (player.hp <= 0){
+		terminalLog("You are killed");
+		document.getElementById(
+	    }
 	}
 }
 

@@ -8,7 +8,8 @@ body{
 div#combatField{
     height:600px;
     width:800px;
-    border:dotted;
+    border:dashed;
+    z-index:5;
     border-color:green;
 }
 
@@ -44,7 +45,7 @@ div#infoWrapper{
 div#statWrapper{
     height:446px;
     padding:10px;
-    border:dotted;
+    border:dashed;
     border-color:green;
     font-size:16px;
 }
@@ -54,11 +55,15 @@ div#monsterStat{
 }
 
 div#playerTerminal{
-    height:90px;
+    height:95px;
     margin-top:10px;
     padding-left: 5px;
     vertical-align:bottom;
-    border:dotted;
+    border:dashed;
     border-color:green;
     font-size:16px;
+}
+
+div#ascii{
+    font-size:12px;
 }
