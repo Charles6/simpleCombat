@@ -154,7 +154,7 @@ function monsterStat(mon){
 	"Monster Name: " + mon.name + "<br>" +
 	"Monster HP: " + monsterHealth + "<br>" +
 	"<div id='ascii'>" + mon.art + "</div>";
-    
+
 };
 
 function mAttack(weaponChoice,mon){
@@ -163,11 +163,10 @@ function mAttack(weaponChoice,mon){
 	if ( playerDodge == 0 && monsterAtk > 0 ) {
 		player.hp -= monsterAtk;
 		terminalLog(mon.name + " hit you for " + monsterAtk +" damage.")
-	    playerStat();
-	    if (player.hp <= 0){
-		terminalLog("You are killed");
-		document.getElementById(
-	    }
+	  playerStat();
+	  if (player.hp <= 0){
+			terminalLog("You are killed");
+		}
 	}
 }
 
